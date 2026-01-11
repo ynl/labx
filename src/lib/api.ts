@@ -41,7 +41,7 @@ export const aiCreationApi = {
   async create(creation: Omit<AICreation, 'id' | 'created_at' | 'likes'>) {
     const { data, error } = await supabase
       .from('ai_creations')
-      .insert([creation])
+      .insert([creation as any])
       .select()
       .single();
 
@@ -56,7 +56,7 @@ export const aiCreationApi = {
   async update(id: string, updates: Partial<AICreation>) {
     const { data, error } = await supabase
       .from('ai_creations')
-      .update(updates)
+      .update(updates as any)
       .eq('id', id)
       .select()
       .single();
@@ -82,9 +82,9 @@ export const aiCreationApi = {
 
   // Increment likes
   async incrementLikes(id: string) {
-    const { error } = await supabase.rpc('increment_likes', {
+    const { error } = await supabase.rpc('increment_likes' as any, {
       creation_id: id,
-    });
+    } as any);
 
     if (error) {
       throw error;
