@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Any
 from datetime import datetime
 from .models import PersonalityTrait, Interest
 
@@ -25,10 +25,10 @@ class UserProfile(BaseModel):
     interests: List[Interest] = Field(default_factory=list)
 
     # 偏好设置
-    preferences: Dict[str, any] = Field(default_factory=dict)
+    preferences: Dict[str, Any] = Field(default_factory=dict)
 
     # 语言风格
-    language_style: Dict[str, any] = Field(default_factory=lambda: {
+    language_style: Dict[str, Any] = Field(default_factory=lambda: {
         "formality": 0.5,  # 0=非正式, 1=正式
         "verbosity": 0.5,  # 0=简洁, 1=详细
         "humor": 0.5,      # 0=严肃, 1=幽默
