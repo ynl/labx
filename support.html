@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabX Support / 技术支持</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #07C160, #10AEFF);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 28px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 30px 0;
+        }
+        
+        .lang-btn {
+            padding: 8px 24px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        
+        .lang-btn:hover {
+            border-color: #07C160;
+            color: #07C160;
+        }
+        
+        .lang-btn.active {
+            background: #07C160;
+            color: white;
+            border-color: #07C160;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        
+        .section {
+            display: none;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        h2 {
+            font-size: 20px;
+            color: #07C160;
+            margin: 32px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        h2:first-child {
+            margin-top: 0;
+        }
+        
+        h3 {
+            font-size: 16px;
+            color: #333;
+            margin: 20px 0 12px;
+        }
+        
+        p {
+            margin-bottom: 12px;
+            color: #555;
+        }
+        
+        ul, ol {
+            margin: 12px 0;
+            padding-left: 24px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        strong {
+            color: #333;
+        }
+        
+        a {
+            color: #07C160;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .faq-item {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        
+        .faq-q {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .faq-a {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, #07C160, #06AD56);
+            color: white;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .contact-card h3 {
+            color: white;
+            margin-bottom: 12px;
+        }
+        
+        .contact-card a {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #07C160;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 14px;
+            margin-right: 8px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 12px;
+        }
+        
+        .nav-links a {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px;
+            }
+            
+            .content {
+                padding: 24px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">L</div>
+            <h1>LabX Support</h1>
+            <p class="subtitle">AI Creative Experiment Gallery</p>
+        </div>
+        
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('en')">English</button>
+            <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+        </div>
+        
+        <div class="content">
+            <!-- English Version -->
+            <div id="en" class="section active">
+                <h2>About LabX</h2>
+                <p>LabX is a showcase platform for AI-powered creative experiments. It serves as a unified gallery where you can discover and experience innovative AI product prototypes and creative ideas.</p>
+                <p><strong>Important:</strong> All features in LabX are experimental demonstrations designed to showcase creative possibilities. They are not production-ready tools and may have limited functionality.</p>
+                
+                <h2>Getting Started</h2>
+                <h3>How to Use LabX</h3>
+                <ol>
+                    <li><span class="step-number">1</span><strong>Sign In</strong> - Use your email to receive a verification code and log in</li>
+                    <li><span class="step-number">2</span><strong>Browse Experiments</strong> - Explore the creative experiment gallery on the home screen</li>
+                    <li><span class="step-number">3</span><strong>Try Experiments</strong> - Tap any experiment card to experience the demo</li>
+                    <li><span class="step-number">4</span><strong>Explore Features</strong> - Each experiment showcases different AI capabilities</li>
+                </ol>
+                
+                <h2>Current Experiments</h2>
+                <h3>Smart Bill Recognition Demo</h3>
+                <p>This experiment demonstrates AI-powered receipt scanning capabilities:</p>
+                <ul>
+                    <li>Take a photo or select an image of a receipt</li>
+                    <li>AI analyzes and extracts bill information</li>
+                    <li>View recognized items and amounts</li>
+                    <li>Add participants to split the bill (demo purpose)</li>
+                </ul>
+                <p><em>Note: This is a technology demonstration, not a complete bill-splitting service.</em></p>
+                
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-q">Q: Is LabX a complete bill-splitting app?</div>
+                    <div class="faq-a">A: No. LabX is a creative experiment showcase platform. The bill recognition feature is a demo that demonstrates AI capabilities, not a production-ready service.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">Q: Why do I need to verify my email?</div>
+                    <div class="faq-a">A: Email verification helps us ensure secure access to the app. We send a one-time verification code to your email for authentication.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">Q: Why does the app need camera/photo access?</div>
+                    <div class="faq-a">A: Camera and photo access are only used for the bill recognition demo. Images are processed locally or temporarily for AI analysis and are not stored permanently.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">Q: Why does the app need contacts access?</div>
+                    <div class="faq-a">A: Contacts access is optional and only used to help you quickly add participants in the bill-splitting demo. Contact data is used locally and not uploaded to our servers.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">Q: Will there be more experiments?</div>
+                    <div class="faq-a">A: Yes! LabX is designed to continuously showcase new AI creative experiments. New demos will be added through over-the-air updates.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">Q: How do I delete my account?</div>
+                    <div class="faq-a">A: You can delete your account from the Profile tab > Delete Account. Alternatively, contact us at the email below.</div>
+                </div>
+                
+                <h2>Troubleshooting</h2>
+                <h3>Common Issues</h3>
+                <ul>
+                    <li><strong>Verification code not received:</strong> Check your spam folder. Make sure you entered the correct email address.</li>
+                    <li><strong>Bill recognition not working:</strong> Ensure the image is clear and well-lit. Try taking a new photo with better lighting.</li>
+                    <li><strong>App crashes:</strong> Try closing and reopening the app. If the issue persists, reinstall the app.</li>
+                </ul>
+                
+                <h2>Contact Us</h2>
+                <p>If you have any questions, feedback, or need assistance, please reach out to us:</p>
+                
+                <div class="contact-card">
+                    <h3>Email Support</h3>
+                    <a href="mailto:yilin@tencent.com">yilin@tencent.com</a>
+                </div>
+                
+                <p>We typically respond within 1-2 business days.</p>
+            </div>
+            
+            <!-- Chinese Version -->
+            <div id="zh" class="section">
+                <h2>关于 LabX</h2>
+                <p>LabX 是一个 AI 创意实验的展示平台。它作为一个统一的创意画廊，让你可以发现和体验创新的 AI 产品原型和创意想法。</p>
+                <p><strong>重要提示：</strong>LabX 中的所有功能都是实验性演示，旨在展示创意的可能性。它们不是成熟的生产工具，功能可能有限。</p>
+                
+                <h2>快速入门</h2>
+                <h3>如何使用 LabX</h3>
+                <ol>
+                    <li><span class="step-number">1</span><strong>登录</strong> - 使用邮箱接收验证码并登录</li>
+                    <li><span class="step-number">2</span><strong>浏览实验</strong> - 在首页探索创意实验画廊</li>
+                    <li><span class="step-number">3</span><strong>体验实验</strong> - 点击任意实验卡片体验演示</li>
+                    <li><span class="step-number">4</span><strong>探索功能</strong> - 每个实验展示不同的 AI 能力</li>
+                </ol>
+                
+                <h2>当前实验</h2>
+                <h3>智能账单识别演示</h3>
+                <p>这个实验展示了 AI 账单扫描能力：</p>
+                <ul>
+                    <li>拍摄或选择账单图片</li>
+                    <li>AI 分析并提取账单信息</li>
+                    <li>查看识别的项目和金额</li>
+                    <li>添加参与者进行分账（演示用途）</li>
+                </ul>
+                <p><em>注意：这是一个技术演示，不是完整的分账服务。</em></p>
+                
+                <h2>常见问题</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-q">问：LabX 是一个完整的分账应用吗？</div>
+                    <div class="faq-a">答：不是。LabX 是一个创意实验展示平台。账单识别功能是一个演示 AI 能力的 Demo，不是成熟的生产服务。</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">问：为什么需要验证邮箱？</div>
+                    <div class="faq-a">答：邮箱验证帮助我们确保应用的安全访问。我们向您的邮箱发送一次性验证码进行身份验证。</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">问：为什么应用需要相机/相册权限？</div>
+                    <div class="faq-a">答：相机和相册权限仅用于账单识别演示。图片在本地处理或临时用于 AI 分析，不会永久存储。</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">问：为什么应用需要通讯录权限？</div>
+                    <div class="faq-a">答：通讯录权限是可选的，仅用于帮助您在分账演示中快速添加参与者。联系人数据仅在本地使用，不会上传到服务器。</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">问：会有更多实验吗？</div>
+                    <div class="faq-a">答：是的！LabX 设计为持续展示新的 AI 创意实验。新的演示将通过 OTA 更新添加。</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">问：如何删除账户？</div>
+                    <div class="faq-a">答：您可以在「我的」页面 > 删除账户 来删除您的账户。或者通过以下邮箱联系我们。</div>
+                </div>
+                
+                <h2>问题排查</h2>
+                <h3>常见问题</h3>
+                <ul>
+                    <li><strong>未收到验证码：</strong>请检查垃圾邮件文件夹。确保您输入了正确的邮箱地址。</li>
+                    <li><strong>账单识别不工作：</strong>确保图片清晰且光线充足。尝试在更好的光线下重新拍照。</li>
+                    <li><strong>应用崩溃：</strong>尝试关闭并重新打开应用。如果问题持续，请重新安装应用。</li>
+                </ul>
+                
+                <h2>联系我们</h2>
+                <p>如果您有任何问题、反馈或需要帮助，请联系我们：</p>
+                
+                <div class="contact-card">
+                    <h3>邮件支持</h3>
+                    <a href="mailto:yilin@tencent.com">yilin@tencent.com</a>
+                </div>
+                
+                <p>我们通常在 1-2 个工作日内回复。</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 LabX. All rights reserved.</p>
+            <div class="nav-links">
+                <a href="https://ynl.github.io/labx/">Privacy Policy / 隐私政策</a>
+                <a href="https://ynl.github.io/labx/support.html">Support / 技术支持</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function switchLang(lang) {
+            // Update sections
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            
+            // Update buttons
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
