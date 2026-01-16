@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "LabX entry module"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "LabX main ability"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "LabX"
+    },
+    {
+      "name": "app_name",
+      "value": "LabX"
+    },
+    {
+      "name": "camera_permission_reason",
+      "value": "用于扫描账单"
+    },
+    {
+      "name": "media_permission_reason",
+      "value": "用于选择和保存账单图片"
+    },
+    {
+      "name": "contacts_permission_reason",
+      "value": "用于快速添加分账参与者"
+    },
+    {
+      "name": "internet_permission_reason",
+      "value": "用于数据同步和认证"
+    }
+  ]
+}
