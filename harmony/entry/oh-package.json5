@@ -1,0 +1,11 @@
+{
+  "name": "entry",
+  "version": "1.0.0",
+  "description": "LabX entry module for HarmonyOS",
+  "main": "index.ets",
+  "author": "yilin",
+  "license": "MIT",
+  "dependencies": {
+    "@rnoh/react-native-openharmony": "file:../../node_modules/@rnoh/react-native-openharmony/harmony"
+  }
+}
