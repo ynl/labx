@@ -1,0 +1,27 @@
+{
+  "name": "weui-react-native",
+  "version": "1.0.0",
+  "description": "WeUI components for React Native - a faithful port of Tencent's WeUI design system",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "react-native",
+    "weui",
+    "wechat",
+    "ui-components",
+    "design-system"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.72.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-native": "^0.72.0",
+    "typescript": "^5.3.0"
+  }
+}
